@@ -1,0 +1,145 @@
+html, body {
+  width: 400px;
+  height: 525px; /* 現在の高さに合わせて指定 */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  position: relative;
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box; /* 余白によるサイズ崩れを防止 */
+  background-image: linear-gradient(225deg, #2e1313, #140041);
+  overflow: hidden;
+}
+
+#canvas {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.cat-icon {
+  position: absolute;
+  top: -40px;
+  right: -30px;
+  width: 200px;
+  height: auto;
+  z-index: 100;
+  pointer-events: none;
+}
+
+
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-container {
+  background: rgba(255, 255, 255, 0.30);
+  backdrop-filter: blur(10px);          /* 後ろのキャンバスを10px分ボカしてすりガラスにします */
+  -webkit-backdrop-filter: blur(10px);  /* Google Chrome等で確実に動かすための命令です */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* ガラスの縁（ふち）を薄っすら光らせます */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 6px 6px 12px -4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #000;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1d232a;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  padding-bottom: 3px;
+}
+
+/* 設定項目を綺麗に配置する */
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 20px; /* 最初から丸みを持たせておきます */
+  /* 背景が変わるのと、文字の大きさが変わるのを「ふわっと（0.3秒）」させる設定です */
+  transition: background-image 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.setting-item label {
+  font-size: 12px;
+  cursor: pointer;
+  color: #000;
+  transition: font-size 0.3s ease, color 0.3s ease; /* 文字の大きさと色が変わるのをふわっとさせます */
+}
+
+/* マウスを乗せたときの設定 */
+.setting-item:hover {
+  background-image: linear-gradient(225deg, #2e1313, #140041);
+  transform: scale(1.02); /* 項目全体をほんの少しだけ大きくふっくらさせます */
+}
+
+/* マウスを乗せたときに、文字の色を白くし、大きさを少し大きくします */
+.setting-item:hover label {
+  color: #ffff;
+  font-size: 13.5px; /* 元の12pxより少し大きくします */
+}
+
+.setting-item input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 40px;
+  height: 22px;
+  background-color: #d1d5db; /* OFFのときの背景色 */
+  border-radius: 11px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  outline: none;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+/* スイッチの中にある「動く白い丸」 */
+.setting-item input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background-color: #ffffff;
+  transition: transform 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.setting-item input[type="checkbox"]:checked {
+  background-color: #d18383;
+}
+
+/* スイッチがONのときに、白い丸を右側にスライドさせる */
+.setting-item input[type="checkbox"]:checked::before {
+  transform: translateX(18px);
+}
