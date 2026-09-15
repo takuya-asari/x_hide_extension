@@ -1,3 +1,5 @@
+<img width="401" height="525" alt="image" src="https://github.com/user-attachments/assets/3015924f-4a1d-4df9-b30f-94d0ec34e687" />
+
 # switch X
 
 switch XはX（旧ツイッター）のPCブラウザ版で使えるchrome拡張機能です。
