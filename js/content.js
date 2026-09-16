@@ -69,9 +69,20 @@ chrome.storage.onChanged.addListener((changes, area) => {
 
 // スクロール時などの動的追加に対応する監視役
 const observer = new MutationObserver(() => {
-  chrome.storage.local.get(keysToGet, (result) => {
-    applySettings(result);
-  });
+  // 拡張機能のコンテキスト（連絡先）が切れている場合は監視を強制終了
+  if (!chrome.runtime?.id) {
+    observer.disconnect();
+    return;
+  }
+
+  try {
+    chrome.storage.local.get(keysToGet, (result) => {
+      if (chrome.runtime.lastError) return;
+      applySettings(result);
+    });
+  } catch (e) {
+    observer.disconnect();
+  }
 });
 
 observer.observe(document.body, {
