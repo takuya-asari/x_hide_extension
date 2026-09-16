@@ -2,7 +2,7 @@
 
 # switch X
 
-switch XはX（旧ツイッター）のPCブラウザ版で使えるchrome拡張機能です。
+「Switch X」はX（旧ツイッター）のPCブラウザ版で使えるchromeとFirefoxのアドオン拡張機能です。
 
 ### サイドバー
 
