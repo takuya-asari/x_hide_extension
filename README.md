@@ -31,3 +31,9 @@ https://addons.mozilla.org/addon/switch-x/
 3. 隠したい項目のスイッチをオンにするだけで、すぐに画面に反映されます！
 
 ※本拡張機能は個人が開発した非公式の拡張機能です。X Corp.とは一切関係ありません。
+
+<img width="1280" height="800" alt="1" src="https://github.com/user-attachments/assets/0fbd9654-3e87-49a3-bb68-40e4df4adf94" />
+<img width="1280" height="800" alt="2" src="https://github.com/user-attachments/assets/9908ec37-bba8-4429-83a9-a9b55eb3b766" />
+<img width="1280" height="800" alt="3" src="https://github.com/user-attachments/assets/98c793c2-316e-403d-8a0b-290d8beb6308" />
+
+
