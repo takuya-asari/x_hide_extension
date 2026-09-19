@@ -10,6 +10,10 @@ chrome拡張機能ストア
 https://chromewebstore.google.com/detail/switch-x/gkmeeiofmgdddmpocjikfndbcpkfeoik
 
 
+Firefox addonストア
+https://addons.mozilla.org/addon/switch-x/
+
+
 ## 【こんな方におすすめです】
 ・タイムラインの閲覧に集中したい方
 ・サイドバーのニュースやおすすめユーザーをすっきり隠したい方
